@@ -7,7 +7,7 @@
     <groupId>it.luca.java</groupId>
     <artifactId>java-utils</artifactId>
     <version>0.1.0</version>
-    <description>Utility functions for Java 8+</description>
+    <description>Utility functions for Java 8</description>
     <organization>
         <name>it.luca</name>
         <url>https://github.com/carloniluca91</url>

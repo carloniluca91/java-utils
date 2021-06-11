@@ -64,6 +64,15 @@ public class Stream {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Applies given function to each element of list
+     * @param list input list
+     * @param function function to apply on each list element
+     * @param <T> type of input list's element
+     * @param <R> type of output list's element
+     * @return list of distinct elements obtained by applying given function to each element of input list
+     */
+
     public static <T, R> List<R> mapDistinct(List<T> list, Function<T, R> function) {
 
         return list.stream().map(function)
