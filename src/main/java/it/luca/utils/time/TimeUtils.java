@@ -1,5 +1,6 @@
 package it.luca.utils.time;
 
+import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -77,5 +78,17 @@ public class TimeUtils {
 
     public static LocalDateTime toDateTime(String date, DateTimeFormatter formatter) {
         return LocalDateTime.parse(date, formatter);
+    }
+
+    /**
+     * Convert input string to a java.sql.Timestamp
+     * @param date input string
+     * @param pattern input string's pattern
+     * @return instance of java.sql.Timestamp
+     */
+    
+    public static Timestamp toTimestamp(String date, String pattern) {
+
+        return Timestamp.valueOf(toDateTime(date, pattern));
     }
 }

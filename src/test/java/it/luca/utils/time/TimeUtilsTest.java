@@ -8,6 +8,9 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 class TimeUtilsTest {
 
+    private final String DATE_TIME = "2021-01-01T12:00:00";
+    private final String DATE_TIME_PATTERN = "yyyy-MM-dd'T'HH:mm:ss";
+
     @Test
     void toDate() {
 
@@ -19,8 +22,13 @@ class TimeUtilsTest {
     @Test
     void toDateTime() {
 
-        String DATE_TIME = "2021-01-01T12:00:00";
-        assertDoesNotThrow(() -> TimeUtils.toDateTime(DATE_TIME, "yyyy-MM-dd'T'HH:mm:ss"));
+        assertDoesNotThrow(() -> TimeUtils.toDateTime(DATE_TIME, DATE_TIME_PATTERN));
         assertDoesNotThrow(() -> TimeUtils.toDateTime(DATE_TIME, DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+    }
+
+    @Test
+    void toTimestamp() {
+
+        assertDoesNotThrow(() -> TimeUtils.toTimestamp(DATE_TIME, DATE_TIME_PATTERN));
     }
 }
