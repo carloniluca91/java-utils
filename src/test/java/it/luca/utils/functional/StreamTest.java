@@ -8,12 +8,19 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.IntStream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class StreamTest {
 
     private final String[] ARRAY = {"hello", "world"};
     private final List<String> LIST = Arrays.asList(ARRAY);
+
+    @Test
+    void anyMatch() {
+
+        assertTrue(Stream.anyMatch(ARRAY, s -> s.startsWith("h")));
+        assertFalse(Stream.anyMatch(ARRAY, s -> s.startsWith("x")));
+    }
 
     @Test
     void filter() {
