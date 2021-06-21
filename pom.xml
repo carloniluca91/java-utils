@@ -6,7 +6,7 @@
 
     <groupId>it.luca</groupId>
     <artifactId>java-utils</artifactId>
-    <version>0.2.0</version>
+    <version>0.3.0</version>
     <description>Utility functions for Java 8</description>
     <organization>
         <name>it.luca</name>
