@@ -9,6 +9,29 @@ import java.util.stream.Collectors;
 public class Stream {
 
     /**
+     * Same as {@link #allMatch(List, Predicate)}
+     */
+
+    public static <T> boolean allMatch(T[] array, Predicate<T> predicate) {
+
+        return allMatch(Arrays.asList(array), predicate);
+    }
+
+    /**
+     * Evaluates if all elements of the collection satisfy a predicate
+     * @param list input collection
+     * @param predicate predicate to be evaluated
+     * @param <T> type of collection element
+     * @return true if all elements in the collection satisfy the predicate, false otherwise
+     */
+
+    public static <T> boolean allMatch(List<T> list, Predicate<T> predicate) {
+
+        return list.stream().allMatch(predicate);
+    }
+
+
+    /**
      * Same as {@link #anyMatch(List, Predicate)}
      */
 

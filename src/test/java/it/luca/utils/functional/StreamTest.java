@@ -16,6 +16,13 @@ class StreamTest {
     private final List<String> LIST = Arrays.asList(ARRAY);
 
     @Test
+    void allMatch() {
+
+        assertFalse(Stream.allMatch(ARRAY, s -> s.startsWith("h")));
+        assertTrue(Stream.allMatch(ARRAY, s -> s.contains("l")));
+    }
+
+    @Test
     void anyMatch() {
 
         assertTrue(Stream.anyMatch(ARRAY, s -> s.startsWith("h")));
