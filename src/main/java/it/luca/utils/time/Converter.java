@@ -8,10 +8,10 @@ import java.time.format.DateTimeFormatter;
 public class Converter {
 
     /**
-     * Convert input string to LocalDate
+     * Convert input string to {@link LocalDate}
      * @param date input string
      * @param pattern input string's pattern
-     * @return instance of LocalDate
+     * @return {@link LocalDate}
      */
 
     public static LocalDate toDate(String date, String pattern) {
@@ -19,10 +19,10 @@ public class Converter {
     }
 
     /**
-     * Convert input string to LocalDate
+     * Convert input string to {@link LocalDate}
      * @param date input string
      * @param formatter input string's pattern
-     * @return instance of LocalDate
+     * @return {@link LocalDate}
      */
 
     public static LocalDate toDate(String date, DateTimeFormatter formatter) {
@@ -30,10 +30,10 @@ public class Converter {
     }
 
     /**
-     * Convert input string to LocalDateTime
+     * Convert input string to {@link LocalDateTime}
      * @param date input string
      * @param pattern input string's pattern
-     * @return instance of LocalDateTime
+     * @return {@link LocalDateTime}
      */
 
     public static LocalDateTime toDateTime(String date, String pattern) {
@@ -41,10 +41,10 @@ public class Converter {
     }
 
     /**
-     * Convert input string to LocalDateTime
+     * Convert input string to {@link LocalDateTime}
      * @param date input string
      * @param formatter input string's pattern
-     * @return instance of LocalDateTime
+     * @return {@link LocalDateTime}
      */
 
     public static LocalDateTime toDateTime(String date, DateTimeFormatter formatter) {
@@ -52,10 +52,10 @@ public class Converter {
     }
 
     /**
-     * Convert input string to a java.sql.Timestamp
+     * Convert input string to a {@link Timestamp}
      * @param date input string
      * @param pattern input string's pattern
-     * @return instance of java.sql.Timestamp
+     * @return {@link Timestamp}
      */
     
     public static Timestamp toTimestamp(String date, String pattern) {
